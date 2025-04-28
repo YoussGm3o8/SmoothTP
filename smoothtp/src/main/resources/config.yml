@@ -1,0 +1,67 @@
+# SmoothTP Configuration
+
+# Fade duration in ticks (20 ticks = 1 second)
+# Recommended values: 10-40 (0.5-2 seconds)
+# Higher values make teleportation slower but smoother
+fade-duration: 15
+
+# Sound settings
+# Set to false if you don't want the enderman-like teleport sound
+play-sound: true
+
+# Animation settings
+# Possible values: TITLE, GTA, BOTH
+# TITLE is a simple fade effect
+# GTA is the GTA Online-style animation with raising/falling
+# BOTH combines both effects
+animation-type: GTA
+
+# Debug mode (additional logging)
+# Useful for troubleshooting teleport issues
+debug: false
+
+# Message shown when a player teleports (leave empty for no message)
+teleport-message: ""
+
+# Advanced settings (don't change unless you know what you're doing)
+# -----------------------------------------------------------------
+
+# The delay (in ticks) between teleport and fade-in animation
+# This gives the client time to load the new area before showing it
+fade-in-delay: 5
+
+# Title animation settings
+# These are used when animation-type is TITLE or BOTH
+title:
+  # Fade duration in ticks (20 ticks = 1 second)
+  # Recommended values: 10-40 (0.5-2 seconds)
+  # Higher values make teleportation slower but smoother
+  fade-duration: 15
+  
+  # The delay (in ticks) between teleport and fade-in animation
+  # This gives the client time to load the new area before showing it
+  fade-in-delay: 5
+
+# GTA-style animation settings (durations in ticks, 20 ticks = 1 second)
+# These are used when animation-type is GTA or BOTH
+gta:
+  # The duration of the raising up animation
+  up-duration: 40
+  
+  # The duration between the x-z translate animation and the previous animation
+  fade-in-duration: 20
+  
+  # The duration of the x-z translate animation
+  stay-duration: 20
+  
+  # The duration between the x-z translate animation and the next animation
+  fade-out-duration: 40
+  
+  # The duration of the falling down animation
+  down-duration: 40
+  
+  # The idle duration after the falling down animation
+  down-stay-duration: 20
+  
+  # The blocks to raise up when teleporting
+  up-offset: 100.0
